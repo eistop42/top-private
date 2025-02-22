@@ -1,6 +1,8 @@
 import telebot
 import random
 
+from chat_smart import get_answer
+
 token = '7584894804:AAEB80w-_kBopjbvnuL8BSUm5ml7UtlFJGs'
 bot = telebot.TeleBot(token)
 
@@ -15,11 +17,7 @@ def weather(message):
 @bot.message_handler(func=lambda message: True)
 def get_task(message):
     text = message.text
-    if text in data.keys():
-        ans = data.get(text)
-        ans = random.choice(ans)
-    else:
-        ans = 'эмм'
+    ans = get_answer(text)
     bot.reply_to(message, ans)
 
 bot.infinity_polling()
