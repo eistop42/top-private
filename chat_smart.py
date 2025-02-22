@@ -1,7 +1,7 @@
 import requests
 
 catalog = 'b1gtphdg2vndncqf33o7'
-token = 'AQVNyePnVMMSnSNAA1sPr1xJbUdl2KSIyJAmTj3w'
+token = 'AQVNyLWbtYTmPzaqDniPH2bsBjA_teTrHeXxkGff'
 
 
 url = "https://llm.api.cloud.yandex.net/foundationModels/v1/completion"
